@@ -1,16 +1,16 @@
-/* Pismo Family Practice: same type as Pismo Vitality, its own calmer teal. */
+/* Pismo Family Practice: same type and round logo as Pismo Vitality, in the practice's orange and brown. */
 :root {
-  --bg: #fbfaf7; --surface: #ffffff; --tint: #eef4f2; --sand: #f4efe7;
-  --ink: #15262a; --ink-soft: #536468; --line: #e3e1da;
-  --teal: #1f6b66; --teal-deep: #134541; --gold: #9a7442;
+  --bg: #fcfaf7; --surface: #ffffff; --tint: #fbf0e5; --sand: #f3e9de;
+  --ink: #2a1d14; --ink-soft: #6a5a4e; --line: #ebe0d4;
+  --accent: #b85f1a; --accent-hover: #9a4e14; --brown: #4a2f1d; --gold: #9c5a22;
   --display: 'Fraunces', Georgia, serif; --body: 'Inter', system-ui, sans-serif;
-  --radius: 18px; --shadow: 0 16px 40px rgba(19, 69, 65, .10);
+  --radius: 18px; --shadow: 0 16px 40px rgba(74, 47, 29, .12);
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; height: auto; display: block; }
-a { color: var(--teal); text-underline-offset: 3px; }
+a { color: var(--accent); text-underline-offset: 3px; }
 h1, h2, h3 { font-family: var(--display); font-weight: 500; line-height: 1.12; letter-spacing: -.01em; margin: 0 0 .55em; }
 h1 { font-size: clamp(2.2rem, 5.5vw, 3.5rem); }
 h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); }
@@ -24,21 +24,24 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 
 .preview-note { background: #fff4d6; color: #5c4610; text-align: center; font-size: .84rem; font-weight: 600; padding: .45rem 1rem; }
 
-.btn { display: inline-flex; align-items: center; justify-content: center; font: inherit; font-weight: 700; font-size: .95rem; text-decoration: none; border-radius: 999px; padding: .85rem 1.5rem; background: var(--teal); color: #fff; box-shadow: 0 8px 20px rgba(31, 107, 102, .25); white-space: nowrap; }
-.btn:hover { background: var(--teal-deep); }
+.btn { display: inline-flex; align-items: center; justify-content: center; font: inherit; font-weight: 700; font-size: .95rem; text-decoration: none; border-radius: 999px; padding: .85rem 1.5rem; background: var(--accent); color: #fff; box-shadow: 0 8px 20px rgba(184, 95, 26, .28); white-space: nowrap; }
+.btn:hover { background: var(--accent-hover); }
 .btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--line); }
-.btn.ghost:hover { box-shadow: inset 0 0 0 1.5px var(--teal); color: var(--teal); }
+.btn.ghost:hover { box-shadow: inset 0 0 0 1.5px var(--accent); color: var(--accent); }
 .btn.small { padding: .6rem 1.1rem; font-size: .9rem; }
 .actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.6rem; }
 
 header.site { position: sticky; top: 0; z-index: 10; background: rgba(251, 250, 247, .94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 .head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 0; }
-.brand { text-decoration: none; color: var(--ink); display: flex; flex-direction: column; line-height: 1.2; }
-.brand-name { font-family: var(--display); font-size: 1.3rem; font-weight: 600; color: var(--teal-deep); }
+.brand { text-decoration: none; color: var(--ink); display: flex; align-items: center; gap: .7rem; line-height: 1.2; }
+.brand img { width: 46px; height: 46px; }
+.brand-text { display: flex; flex-direction: column; }
+.foot-logo { width: 54px; height: 54px; margin-bottom: .8rem; }
+.brand-name { font-family: var(--display); font-size: 1.3rem; font-weight: 600; color: var(--brown); }
 .brand-sub { font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
 header nav { display: none; gap: 1.8rem; }
 header nav a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: .95rem; }
-header nav a:hover { color: var(--teal); }
+header nav a:hover { color: var(--accent); }
 @media (min-width: 760px) { header nav { display: flex; } }
 
 .hero { background: linear-gradient(180deg, var(--tint), var(--bg)); }
@@ -52,7 +55,7 @@ header nav a:hover { color: var(--teal); }
 .fact-grid div { padding: 1.3rem 1.2rem; border-bottom: 1px solid var(--line); }
 .fact-grid div:nth-child(odd) { border-right: 1px solid var(--line); }
 .fact-grid div:nth-last-child(-n+2) { border-bottom: 0; }
-.fact-grid strong { display: block; font-family: var(--display); font-size: 1.25rem; font-weight: 600; color: var(--teal-deep); line-height: 1.2; }
+.fact-grid strong { display: block; font-family: var(--display); font-size: 1.25rem; font-weight: 600; color: var(--brown); line-height: 1.2; }
 .fact-grid span { font-size: .88rem; color: var(--ink-soft); }
 @media (min-width: 860px) {
   .fact-grid { grid-template-columns: repeat(4, 1fr); }
@@ -81,7 +84,7 @@ header nav a:hover { color: var(--teal); }
 .note { font-size: .9rem; color: var(--ink-soft); }
 .map iframe { width: 100%; height: 380px; border: 0; border-radius: var(--radius); box-shadow: var(--shadow); }
 
-footer.site { background: var(--teal-deep); color: #d6e6e3; padding: 2.5rem 0 1.5rem; font-size: .92rem; }
+footer.site { background: var(--brown); color: #ecdccd; padding: 2.5rem 0 1.5rem; font-size: .92rem; }
 footer.site a { color: #fff; }
 footer .brand-name { color: #fff; }
 .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; }
