@@ -44,7 +44,7 @@ header nav a:hover { color: var(--teal); }
 .hero { background: linear-gradient(180deg, var(--tint), var(--bg)); }
 .hero-grid { display: grid; gap: 2.5rem; align-items: center; }
 .portrait { margin: 0; justify-self: center; max-width: 380px; }
-.portrait img { border-radius: var(--radius); box-shadow: var(--shadow); }
+.portrait img { width: 100%; aspect-ratio: 460 / 516; object-fit: fill; border-radius: var(--radius); box-shadow: var(--shadow); }  /* source photo is squashed ~14% vertically; stretch it back */
 @media (min-width: 860px) { .hero-grid { grid-template-columns: 1.25fr 1fr; } .portrait { justify-self: end; } }
 
 .facts { padding: 0; margin-top: -1rem; }
